@@ -1,0 +1,1 @@
+self.APP_VERSION = 'web-20261110-01ef556';

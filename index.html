@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080B12">
+<meta http-equiv="Content-Security-Policy"
+      content="default-src 'self'; connect-src 'self' https://api.github.com; style-src 'self' 'unsafe-inline'; img-src 'self' data:; manifest-src 'self'">
+<meta name="robots" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="보유 점검">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<title>보유 점검</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="bar">
+  <div class="bar-title">
+    <span class="logo">📋 보유 점검</span>
+    <span id="bar-sub" class="bar-sub">매매 룰 8가지 · 매일 아침</span>
+  </div>
+  <button id="refresh" class="icon-btn" data-act="refresh" aria-label="새로고침">↻</button>
+</header>
+
+<main id="view" tabindex="-1"></main>
+
+<nav id="tabs" aria-label="화면 전환">
+  <a href="#/day" data-tab="day"><span class="ti">📋</span><span>오늘</span></a>
+  <a href="#/history" data-tab="history"><span class="ti">🗓️</span><span>기록</span></a>
+  <a href="#/settings" data-tab="settings"><span class="ti">⚙️</span><span>설정</span></a>
+</nav>
+
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="version.js"></script>
+<script src="store.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
